@@ -1,0 +1,28 @@
+<% content_for :h2 do %>
+貸出機
+<% end %>
+
+    <% @products.each do |product| %>
+        <div class= "text-center mt-4">
+            <%= link_to(image_tag(product.image_url), product_path(product)) if product.image? %>
+        </div>
+    <section class="product_spec">
+        <ul style="text-align: right;">
+            <li>Cpu&nbsp;:&nbsp;</li>
+            <li>Graphic&nbsp;:&nbsp;</li>
+            <li>Storage&nbsp;:&nbsp;</li>
+            <li>Memory&nbsp;:&nbsp;</li>
+            <li>os&nbsp;:&nbsp;</li>
+            <li>Price&nbsp;:&nbsp;</li>
+        </ul>
+
+        <ul style="text-align: left;">
+            <li><%= product.cpu %></li>
+            <li><%= product.graphic %></li>
+            <li><%= product.storage %></li>
+            <li><%= product.memory %></li>
+            <li><%= product.os %></li>
+            <li><%= product.price %></li>
+        </ul>
+    </section>
+    <% end %>

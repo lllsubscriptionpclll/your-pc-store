@@ -1,0 +1,39 @@
+<% content_for :h2 do %>
+貸出機
+<% end %>
+    
+    <div class= "text-center mt-4">
+        <%= image_tag(@product.image_url) %>
+    </div>
+
+    <section class="product_spec">
+        <ul style="text-align: right;">
+            <li>Cpu&nbsp;:&nbsp;</li>
+            <li>Graphic&nbsp;:&nbsp;</li>
+            <li>Storage&nbsp;:&nbsp;</li>
+            <li>Memory&nbsp;:&nbsp;</li>
+            <li>os&nbsp;:&nbsp;</li>
+            <li>Price&nbsp;:&nbsp;</li>
+        </ul>
+
+        <ul style="text-align: left;">
+            <li><%= @product.cpu %></li>
+            <li><%= @product.graphic %></li>
+            <li><%= @product.storage %></li>
+            <li><%= @product.memory %></li>
+            <li><%= @product.os %></li>
+            <li><%= @product.price %></li>
+        </ul>
+    </section>
+
+    <section class="notice">
+        <h3><span>製品名&nbsp;:&nbsp;</span><%= @product.product_name %></h3>
+            <p>付属品&nbsp;:&nbsp;<%= @product.accessory %></p>
+            <p>注　意&nbsp;:&nbsp;<%= @product.notice %></p>
+        <div class="d-grid gap-2 py-2">
+            <button class="btn btn-warning" type="button">
+                <%= puts "Application Form URL: #{@product.application_form}" %>
+                <%= link_to "メールアドレス入力画面から依頼する", @product.application_form , target: "_blank", class: "text-decoration-none text-dark"%>
+            </button>
+        </div>
+    </section>

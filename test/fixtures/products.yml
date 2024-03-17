@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpu: MyString
+  graphic: MyString
+  storage: MyString
+  memory: MyString
+  os: MyString
+  price: MyString
+  product_name: MyString
+
+two:
+  cpu: MyString
+  graphic: MyString
+  storage: MyString
+  memory: MyString
+  os: MyString
+  price: MyString
+  product_name: MyString

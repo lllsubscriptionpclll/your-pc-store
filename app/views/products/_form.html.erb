@@ -1,0 +1,40 @@
+<%= form_with model: @product, local: true, html: { enctype: "multipart/form-data" } do |f| %>
+    <div class="form">
+        
+        <%= f.label "写真の投稿", class: "label" %><br>
+        <%= f.file_field :image %><br>
+
+        <%= f.label "CPU", class: "label" %><br>
+        <%= f.text_field :cpu, value: @product.cpu %><br>
+
+        <%= f.label "graphic", class: "label" %><br>
+        <%= f.text_field :graphic, value: @product.graphic %><br>
+
+        <%= f.label "storage", class: "label" %><br>
+        <%= f.text_field :storage, value: @product.storage %><br>
+
+        <%= f.label "memory", class: "label" %><br>
+        <%= f.text_field :memory, value: @product.memory %><br>
+
+        <%= f.label "os", class: "label" %><br>
+        <%= f.text_field :os, value: @product.os %><br>
+
+        <%= f.label "金額", class: "label" %><br>
+        <%= f.text_field :price, value: @product.price %><br>
+
+        <%= f.label "商品名", class: "label" %><br>
+        <%= f.text_field :product_name, value: @product.product_name, style: "margin-bottom: 20px;" %><br>
+
+        <%= f.label "付属品", class: "label" %><br>
+        <%= f.text_field :accessory, value: @product.accessory, style: "margin-bottom: 20px;" %><br>
+
+        <%= f.label "注意点", class: "label" %><br>
+        <%= f.text_area :notice, value: @product.notice, style: "width:300px; height:100px; margin-bottom: 20px;" %><br>
+
+        <%= f.label "申込ページへのリンク", class: "label" %><br>
+        <%= f.text_area :application_form, value: @product.application_form, style: "width:300px; height:100px; margin-bottom: 20px;" %><br>
+
+        <%= f.submit "送信", class: "label btn btn-primary btn-lg", style: "width: 150px;" %>
+
+    </div>
+<% end %>

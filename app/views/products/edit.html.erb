@@ -1,0 +1,4 @@
+<div class="form text-center product_form" style="padding-bottom:20px">
+    <%= render 'form' %>
+    <%= button_to "削除", product_path(@product), method: :delete, class: "my-4 btn btn-warning btn-lg", remote: true, style: "width: 150px;" %>
+</div>

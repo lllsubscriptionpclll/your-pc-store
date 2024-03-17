@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>電子計算機貸出商店</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    
+    <%= javascript_importmap_tags %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+    <link href="/assets/reset.css" media="screen" rel="stylesheet" />
+    <link href="/assets/style.css" media="screen" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class= "text-center">
+        <h1><%= link_to "電子計算機貸出商店", "/" , class: "text-decoration-none text-dark" %>
+          <% if user_signed_in? %>
+            <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
+          <% end %>
+        </h1>
+    </header> 
+    <div class="container-fluid fs-7">
+        <div class="row justify-content-center">
+            <div class="col-3 text-center text-secondary">貸 出 機</div>
+            <div class="col-3 text-center text-secondary">入力機器</div>
+            <div class="col-3 text-center text-secondary">出力機器</div>
+            <div class="col-3 text-center text-secondary">機器一式</div>
+        </div>
+    </div>
+    <h2><%= yield :h2 %></h2>
+
+    <%= yield %>
+
+    <footer class="text-center text-white"><p>&copy; 2020 - 電子計算機貸出商店</p></footer> 
+  </body>
+</html>
