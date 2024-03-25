@@ -54,6 +54,8 @@ gem 'mini_magick'
 
 gem 'devise'
 
+gem 'dotenv-rails'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

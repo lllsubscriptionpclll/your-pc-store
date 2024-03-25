@@ -25,8 +25,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_02_115409) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image", null: false
-    t.string "accessory", null: false
-    t.text "notice", null: false
+    t.string "accessory"
+    t.text "notice"
     t.text "application_form"
   end
 
