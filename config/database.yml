@@ -17,7 +17,7 @@ test:
 
 production:
   <<: *default
-  url: postgres://_your_pc_store:O2qMiwfQaw0GgrlwRNcFAlQYutx5Yk25@dpg-cntd1lvjbltc739a0p7g-a/your_pc_store_db
+  url: <%= ENV["DATABASE_URL"] %>
   host: <%= ENV["DATABASE_HOST"] %>
   database: <%= ENV["RAILS_DB_NAME"] %>
   username: <%= ENV["RAILS_DB_USERNAME"] %>
