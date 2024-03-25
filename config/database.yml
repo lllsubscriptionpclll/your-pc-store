@@ -17,7 +17,7 @@ test:
 
 production:
   <<: *default
-  port: 5432
+  socket: /var/run/postgresql/.s.PGSQL.5432
   host: <%= ENV["DATABASE_HOST"] %>
   database: <%= ENV["RAILS_DB_NAME"] %>
   username: <%= ENV["RAILS_DB_USERNAME"] %>
