@@ -17,7 +17,7 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV['DATABASE_URL'] %>
   host: <%= ENV["DATABASE_HOST"] %>
   database: <%= ENV["RAILS_DB_NAME"] %>
   username: <%= ENV["RAILS_DB_USERNAME"] %>
