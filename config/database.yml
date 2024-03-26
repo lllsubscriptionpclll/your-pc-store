@@ -3,12 +3,12 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: ubuntu
+  password: ubuntu
 
 development:
   <<: *default
-  username:
-  password: ubuntu
-  host: localhost
   database: your-pc-store-db
 
 test:
@@ -16,7 +16,6 @@ test:
   database: your-pc-store-db
 
 production:
-  <<: *default
   host: <%= ENV["DATABASE_HOST"] %>
   database: <%= ENV["RAILS_DB_NAME"] %>
   username: <%= ENV["RAILS_DB_USERNAME"] %>
